@@ -1,0 +1,18 @@
+#/bin/zsh
+
+# make the needed directories
+mkdir $HOME/.PrusaSlicer
+
+# add pprofiles alias
+alias pprofiles='/usr/bin/git --git-dir=$HOME/.PrusaSlicer/.cfg/ --work-tree=$HOME/.PrusaSlicer'
+
+# add pprofiles alias permanant
+echo "alias pprofiles='/usr/bin/git --git-dir=$HOME/.PrusaSlicer/.cfg/ --work-tree=$HOME/.PrusaSlicer'" >> $HOME/.zshrc
+
+# clone repo
+git clone --bare https://github.com/00Nave198/psprofiles $HOME/.PrusaSlicer/.cfg
+
+psprofiles checkout
+psprofiles config status.showUntrackedFiles no
+
+

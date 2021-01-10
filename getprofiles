@@ -1,0 +1,5 @@
+#/bin/zsh
+
+alias pprofiles='/usr/bin/git --git-dir=$HOME/.PrusaSlicer/.cfg/ --work-tree=$HOME/.PrusaSlicer'
+
+pprofiles pull
