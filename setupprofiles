@@ -12,7 +12,7 @@ echo "alias pprofiles='/usr/bin/git --git-dir=$HOME/.PrusaSlicer/.cfg/ --work-tr
 # clone repo
 git clone --bare https://github.com/00Nave198/psprofiles $HOME/.PrusaSlicer/.cfg
 
-psprofiles checkout
-psprofiles config status.showUntrackedFiles no
+pprofiles checkout
+pprofiles config status.showUntrackedFiles no
 
 
