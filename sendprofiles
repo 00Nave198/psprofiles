@@ -1,14 +1,16 @@
 #/bin/zsh
 
-alias pprofiles='/usr/bin/git --git-dir=$HOME/.PrusaSlicer/.cfg/ --work-tree=$HOME/.PrusaSlicer'
+function psprofiles {
+    /usr/bin/git --git-dir=$HOME/.config/PrusaSlicer/.cfg/ --work-tree=$HOME/.config/PrusaSlicer
+}
 if [ "$1" != "" ]; then
     # do all the stuff
     cd $HOME/.PrusaSlicer
-    pprofiles add printer/*
-    pprofiles add print/*
-    pprofiles add filament/*
-    pprofiles commit -a -m "$1"
-    pprofiles push
+    psprofiles add printer/*
+    psprofiles add print/*
+    psprofiles add filament/*
+    psprofiles commit -a -m "$1"
+    psprofiles push
 else  
     echo "please specify a commit message"
 fi
